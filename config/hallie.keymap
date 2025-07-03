@@ -32,6 +32,22 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
+    macros {
+        tab_left: tab_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>;
+            label = "TAB_LEFT";
+        };
+
+        tab_right: tab_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "TAB_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -59,10 +75,10 @@
 
         raise_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3     &kp F4       &kp F5  &kp F6       &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp F11  &kp F12
-&none   &kp INS  &kp PSCRN  &kp K_CMENU  &none   &none        &kp PAGE_DOWN  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &none    &none
-&none   &none    &none      &none        &none   &none        &trans         &kp K_APP           &kp DOWN        &kp RIGHT      &kp DEL  &kp BSPC
-                            &mo 3        &mo 1   &kp SPACE    &kp ENTER      &mo 2               &mo 2
+&kp ESC  &none       &none      &none       &none        &none              &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp F11  &kp F12
+&none    &none       &none      &none       &none        &kp PRINTSCREEN    &kp PAGE_DOWN  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &none    &none
+&none    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none              &trans         &kp K_APP           &tab_left       &tab_right     &kp DEL  &kp BSPC
+                                &mo 3       &mo 1        &kp SPACE          &kp ENTER      &mo 2               &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
