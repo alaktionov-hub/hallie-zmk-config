@@ -31,9 +31,9 @@
 &lt { quick_tap_ms = <200>; };
 
 &mt {
-    quick_tap_ms = <500>;
-    tapping-term-ms = <500>;
     bindings = <&kp>, <&kp>;
+
+    flavor = "tap-preferred";
 };
 
 / {
