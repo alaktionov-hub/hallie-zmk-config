@@ -53,6 +53,16 @@
         };
     };
 
+    behaviors {
+        insert_up: insert_up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "INSERT_UP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp UP_ARROW>, <&kp INSERT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -80,7 +90,7 @@
 
         raise_layer {
             bindings = <
-&kp ESC  &none       &none      &none             &none         &none              &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp LC(BACKSPACE)  &kp BACKSPACE
+&kp ESC  &none       &none      &none             &none         &none              &kp PAGE_UP    &kp LC(LEFT_ARROW)  &insert_up      &kp LC(RIGHT)  &kp LC(BACKSPACE)  &kp BACKSPACE
 &none    &none       &none      &none             &none         &kp PRINTSCREEN    &kp PAGE_DOWN  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &kp LC(DELETE)     &kp DELETE
 &none    &kp K_UNDO  &kp K_CUT  &kp K_COPY        &kp K_PASTE   &none              &trans         &kp K_APP           &tab_left       &tab_right     &kp DEL            &trans
                                 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE          &kp ENTER      &mo 2               &mo 2
