@@ -51,6 +51,13 @@
             bindings = <&kp LC(TAB)>;
             label = "TAB_RIGHT";
         };
+
+        copy_mode_tmux: copy_mode_tmux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(B) &kp LEFT_BRACKET>;
+            label = "COPY_MODE_TMUX";
+        };
     };
 
     behaviors {
@@ -115,10 +122,10 @@
 
         adjust_layer {
             bindings = <
-&kp ESCAPE  &kp F1       &kp F2  &kp F3          &kp F4       &kp F5         &kp F6       &kp F7       &kp F8  &kp F9  &kp F10  &kp F11
-&none       &none        &none   &none           &none        &none          &none        &none        &none   &none   &none    &kp F12
-&sys_reset  &bootloader  &none   &studio_unlock  &ind IND_ON  &ind BAT_ST    &ind IND_ON  &ind BAT_ST  &none   &none   &none    &none
-                                 &trans          &mo 4        &kp SPACE      &kp ENTER    &mo 1        &mo 2
+&kp ESCAPE  &kp F1  &kp F2  &kp F3           &kp F4       &kp F5         &kp F6       &kp F7       &kp F8  &kp F9  &kp F10  &kp F11
+&none       &none   &none   &none            &none        &none          &none        &none        &none   &none   &none    &kp F12
+&none       &none   &none   &copy_mode_tmux  &ind IND_ON  &ind BAT_ST    &ind IND_ON  &ind BAT_ST  &none   &none   &none    &none
+                            &trans           &mo 4        &kp SPACE      &kp ENTER    &mo 1        &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
