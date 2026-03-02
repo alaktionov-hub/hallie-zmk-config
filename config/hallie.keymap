@@ -38,55 +38,113 @@
 
 / {
     macros {
-        tab_left: tab_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(TAB))>;
-            label = "TAB_LEFT";
-        };
 
-        tab_right: tab_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>;
-            label = "TAB_RIGHT";
-        };
-
-        copy_mode_tmux: copy_mode_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(B) &kp LEFT_BRACKET>;
-            label = "COPY_MODE_TMUX";
-        };
-
-        tmux_past: tmux_past {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(B) &kp RIGHT_BRACKET>;
-            label = "TMUX_PAST";
-        };
-
-        tmux_new_tab: tmux_new_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(B) &kp C>;
-            label = "TMUX_NEW_TAB";
-        };
-
-        tmux_vertical: tmux_vertical {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(B) &kp PERCENT>;
-            label = "TMUX_VERTICAL";
-        };
-
-        tmux_horizontal: tmux_horizontal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(B) &kp DOUBLE_QUOTES>;
-            label = "TMUX_HORIZONTAL";
-        };
+    tab_right: tab_right {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(TAB)>;
+        label = "TAB_RIGHT";
     };
+
+    tab_left: tab_left {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LS(TAB))>;
+        label = "TAB_LEFT";
+    };
+
+    tmux_h: tmux_h {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp H>;
+        label = "TMUX_H";
+    };
+
+    tmux_j: tmux_j {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp J>;
+        label = "TMUX_J";
+    };
+
+    tmux_k: tmux_k {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp K>;
+        label = "TMUX_K";
+    };
+
+    tmux_l: tmux_l {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp L>;
+        label = "TMUX_L";
+    };
+
+    tmux_v: tmux_v {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp V>;
+        label = "TMUX_SPLIT_H";
+    };
+
+    tmux_s: tmux_s {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp S>;
+        label = "TMUX_SPLIT_V";
+    };
+
+    tmux_n: tmux_n {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N>;
+        label = "TMUX_NEXT_WIN";
+    };
+
+    tmux_p: tmux_p {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp P>;
+        label = "TMUX_PREV_WIN";
+    };
+
+    tmux_z: tmux_z {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp Z>;
+        label = "TMUX_ZOOM";
+    };
+
+    tmux_x: tmux_x {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp X>;
+        label = "TMUX_KILL";
+    };
+
+    tmux_c: tmux_c {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp C>;
+        label = "TMUX_NEW_WIN";
+    };
+
+    tmux_r: tmux_r {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp R>;
+        label = "TMUX_RENAME";
+    };
+
+    tmux_d: tmux_d {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp D>;
+        label = "TMUX_DETACH";
+    };
+};
+
 
     behaviors {
         insert_up: insert_up {
