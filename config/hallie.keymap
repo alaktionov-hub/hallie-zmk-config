@@ -38,113 +38,111 @@
 
 / {
     macros {
+        tab_right: tab_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "TAB_RIGHT";
+        };
 
-    tab_right: tab_right {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(TAB)>;
-        label = "TAB_RIGHT";
+        tab_left: tab_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>;
+            label = "TAB_LEFT";
+        };
+
+        tmux_h: tmux_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp H>;
+            label = "TMUX_H";
+        };
+
+        tmux_j: tmux_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp J>;
+            label = "TMUX_J";
+        };
+
+        tmux_k: tmux_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp K>;
+            label = "TMUX_K";
+        };
+
+        tmux_l: tmux_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp L>;
+            label = "TMUX_L";
+        };
+
+        tmux_v: tmux_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp V>;
+            label = "TMUX_SPLIT_H";
+        };
+
+        tmux_s: tmux_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp S>;
+            label = "TMUX_SPLIT_V";
+        };
+
+        tmux_n: tmux_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N>;
+            label = "TMUX_NEXT_WIN";
+        };
+
+        tmux_p: tmux_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp P>;
+            label = "TMUX_PREV_WIN";
+        };
+
+        tmux_z: tmux_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp Z>;
+            label = "TMUX_ZOOM";
+        };
+
+        tmux_x: tmux_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp X>;
+            label = "TMUX_KILL";
+        };
+
+        tmux_c: tmux_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp C>;
+            label = "TMUX_NEW_WIN";
+        };
+
+        tmux_r: tmux_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp R>;
+            label = "TMUX_RENAME";
+        };
+
+        tmux_d: tmux_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp D>;
+            label = "TMUX_DETACH";
+        };
     };
-
-    tab_left: tab_left {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(LS(TAB))>;
-        label = "TAB_LEFT";
-    };
-
-    tmux_h: tmux_h {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp H>;
-        label = "TMUX_H";
-    };
-
-    tmux_j: tmux_j {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp J>;
-        label = "TMUX_J";
-    };
-
-    tmux_k: tmux_k {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp K>;
-        label = "TMUX_K";
-    };
-
-    tmux_l: tmux_l {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp L>;
-        label = "TMUX_L";
-    };
-
-    tmux_v: tmux_v {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp V>;
-        label = "TMUX_SPLIT_H";
-    };
-
-    tmux_s: tmux_s {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp S>;
-        label = "TMUX_SPLIT_V";
-    };
-
-    tmux_n: tmux_n {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp N>;
-        label = "TMUX_NEXT_WIN";
-    };
-
-    tmux_p: tmux_p {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp P>;
-        label = "TMUX_PREV_WIN";
-    };
-
-    tmux_z: tmux_z {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp Z>;
-        label = "TMUX_ZOOM";
-    };
-
-    tmux_x: tmux_x {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp X>;
-        label = "TMUX_KILL";
-    };
-
-    tmux_c: tmux_c {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp C>;
-        label = "TMUX_NEW_WIN";
-    };
-
-    tmux_r: tmux_r {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp R>;
-        label = "TMUX_RENAME";
-    };
-
-    tmux_d: tmux_d {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp D>;
-        label = "TMUX_DETACH";
-    };
-};
-
 
     behaviors {
         insert_up: insert_up {
@@ -258,10 +256,10 @@
 
         tmux {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &tmux_x  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
