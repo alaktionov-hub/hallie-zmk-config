@@ -1,5 +1,10 @@
+#on: [push, pull_request, workflow_dispatch]
+#
+#jobs:
+#  build:
+#    uses: SplittedSpace/zmk-firmware/.github/workflows/build-user-config.yml@mainon: [push, pull_request, workflow_dispatch]
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: SplittedSpace/zmk-firmware/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
